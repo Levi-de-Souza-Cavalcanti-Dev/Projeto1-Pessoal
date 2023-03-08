@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body  {
+    font: 12px "Lucida Grande", "Lucida Sans Unicode",  Arial, sans-serif;
+    background: #242424;
+}
+
+
+a{
+    color: aqua;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover{
+    color: #242424;
+    opacity: 0.6;
+    background: rgb(240, 235, 235);
+    padding: 12px;
+    border-radius: 15px 5px;
+}
+
+#container{
+    width: 100%;
+}
+
+/* Barra de navegação */
+.logo{
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+header{
+    display: flex;
+    min-width: 390px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #141212;
+    border-radius: 9px;
+    height: 10vh;
+    width: 100%;
+}
+
+
+.list{
+    list-style: none;
+    display: flex;
+    min-width: 425px;
+}
+
+.list li{
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+/* Conteúdo Principal*/
+#animacao{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 12px;
+    justify-content: center;
+}
+
+#saida{
+    background: rgb(8, 168, 168);
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+#saida::after {
+    content: '|';
+    margin-left: 5px;
+    opacity: 1;
+    animation: pisca .7s infinite;
+}
+
+@keyframes pisca {
+    0%, 100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }  
+}
+
+.legal{
+    width: 510px;
+    height: 100px;
+}
+
+/* Fim da animação*/
+
+#principal{
+    display: flex;
+    width: 100%;
+    background: #dbd2d210;
+    align-items: center;
+    justify-content: center;
+}
+
+.apresentacao{
+    width: 800px;
+    height:300px;
+    margin: 10px 0px;
+    background: #242424c2;
+    border-radius: 5px;
+    box-shadow: -1px 1px 7px 2px aqua;
+    padding: 25px;
+}
+
+.texto1{
+    float: right;
+    background: #dbd2d223;   
+    max-width: 400px;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 20px 0px 0px;
+    color: aqua;
+    box-shadow: 9px 9px 6px rgba(0, 0, 0, 0.4) ;
+    
+}
+
+.imagens{
+    float: left;
+    margin: 20px 10px 0px 0px;
+    border: 5px solid aqua;
+    border-top: 5px solid rgba(0, 255, 255, 0.219);
+    border-bottom: 5px solid rgba(0, 255, 255, 0.219);
+}
+
+@media (max-width: 720px){
+
+    /* Barra de navegação */
+    .logo{
+        font-size: 22px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-bottom: 27px;
+    }
+
+    .list{
+        list-style: none;
+        display: flex;
+        position: absolute;
+        margin: 81px 10px 0 10px;
+        min-width: 435px;
+    }
+
+    nav{
+        display: flex;
+        justify-content: space-around;
+        background: #141212;
+        height: 125px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    a:hover{
+        color: aqua;
+        opacity: none;
+        background: none;
+        padding: 0px;
+        border-radius: none;
+    }
+
+    /* Conteudo principal*/
+
+    #principal{
+        background: none;
+        min-width: 385px;
+    }
+    
+    
+    .apresentacao{
+        width: 92%;
+        height: 100%;
+        background: #24242415;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        padding: 9px;
+        align-items: center;
+        box-shadow: -1px 1px 7px 4px aqua;
+    }
+
+    .texto1{
+        background: #dbd2d223;   
+        max-width: 400px;
+        border-radius: 12px;
+        padding: 20px;
+        color: aqua;
+        box-shadow: 9px 9px 6px rgba(0, 0, 0, 0.6) ;    
+        margin: 15px;
+    }
+    
+    .legal{
+        width: 510px;
+        height: 100px;
+        margin-bottom: 35px;
+    }
+    
+    #saida{
+        padding: 20px;
+        border-radius: 10px;
+        color: #fff;
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+   
+    
+    
+}

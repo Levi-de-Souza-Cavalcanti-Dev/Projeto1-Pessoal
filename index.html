@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início</title>
+
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+
+    <script src="js/program.js"></script>
+
+
+</head>
+<body>
+
+
+    <div id="container">
+
+
+    <header><!-- Início navegação-->
+        <nav>
+            <a class="logo" href="#">Inicio</a>
+
+            <ul class="list">
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Quem Sou?</a></li>
+                <li><a href="#">Projetos</a></li>
+                <li><a href="#">Cursos</a></li>
+            </ul>
+        </nav>
+    </header>  <!-- Fim navegação -->
+
+
+    <div id="animacao">
+        <div class="legal">
+            <p id="saida">Ciência da Computação</p>            
+
+            <script> 
+
+                function typeWriter(elemento){
+                    const textoArray = elemento.innerHTML.split('')
+                    elemento.innerHTML = ''
+                    textoArray.forEach((letra, i) => {
+                        setTimeout(() => elemento.innerHTML += letra, 98 * i)
+                    })
+                }
+                const titulo = document.querySelector("#saida")
+                typeWriter(titulo)
+                
+            </script>
+            
+        </div>
+    </div>
+
+
+
+    <div id="principal"> <!-- Início do conteúdo Principal -->
+        <section class="apresentacao">
+            <img class="imagens" style="height: 200px; width:200px;" src="imagens/eu.jpg">
+            <p class="texto1">
+                Olá, me chamo Levi de Souza Cavalcanti. Darei uma breve apresentação
+                sobre mim e minhas habilidades.
+                Estou atualmente cursando Ciência da Computação na faculdade Cruzeiro do Sul.
+                Tenho cursos de:  JavaScript, Orientação a Objetos, HTML e CSS avançado, Bootstrap e sei inglês  do  básico
+                para intermediário, tendo compreensão de artigos e vídeos.
+                Tenho interesse numa vaga de estágio dentro deste escopo que citei, para que eu possa  me desenvolver
+                e agregar diariamente na empresa  a qual eu me proponho.
+                Estou disponível para entrevistas, segue abaixo formas de contatos:
+            </p>
+            
+        </section>
+        
+        
+
+    </div>  <!-- Fim do conteúdo principal -->
+
+    <div id="cursos">
+        <p>Logo abaixo apresento minhas formações</p>
+        <ul class="cursos">
+            <li><a href="">JavaScript</a></li>
+            <li><a href="">HTML 5</a></li>
+            <li><a href="">CSS</a></li>
+            <li><a href="">Bootstrap</a></li>
+            <li><a href="">Orientação a Objetos</a></li>
+        </ul>
+    </div>
+
+
+    
+
+    </div><!-- Fim do container -->
+    
+</body>
+</html>
